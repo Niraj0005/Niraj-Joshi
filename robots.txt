@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://niraj-joshi.vercel.app/sitemap.xml
