@@ -205,15 +205,18 @@ section { padding:110px 0; position:relative; }
 }
 .navbar.scrolled { background:rgba(6,16,13,0.96); box-shadow:0 10px 30px rgba(0,0,0,0.25); }
 
-.nav-shell { display:flex; align-items:center; width:100%; padding:14px 0; gap:98px; }
+.nav-shell { display:flex; align-items:center; flex-wrap:nowrap; width:100%; padding:14px 20px; gap:32px; }
 @media (max-width: 576px) {
     .nav-shell {
-        gap: 28px;
+        padding:12px 14px;
+        gap:12px;
     }
 }
 .navbar-brand {
     font-family:var(--font-mono); font-weight:700; font-size:19px; color:#fff !important;
     display:flex; align-items:center; gap:2px;
+    flex-shrink:0;
+    white-space:nowrap;
 }
 .navbar-brand .br { color:var(--muted-2); }
 .navbar-brand .name { color:var(--primary); }
@@ -258,15 +261,23 @@ section { padding:110px 0; position:relative; }
     100% { box-shadow:0 0 0 0 rgba(52,211,153,0); }
 }
 
-.navbar-toggler { border-color:var(--border-strong); padding:6px 10px; }
+.navbar-toggler { border-color:var(--border-strong); padding:6px 10px; flex-shrink:0; margin-left:auto; }
 .navbar-toggler:focus { box-shadow:0 0 0 3px rgba(52,211,153,.25); }
-.navbar-toggler-icon { filter:invert(1); width:1.3em; height:1.3em; }
+.navbar-toggler-icon { filter:invert(1); width:1.2em; height:1.2em; }
 
 @media (max-width:991px){
-    .tab-nav { flex-direction:column; align-items:stretch; width:100%; margin-top:14px; background:transparent; border:none; padding:0; gap:6px; }
-    .tab-nav .nav-link { padding:12px 16px !important; border:1px solid var(--border); }
+    .navbar-collapse {
+        margin-top:14px;
+        padding-bottom:16px;
+    }
+    .tab-nav { flex-direction:column; align-items:stretch; width:100%; margin-top:0; background:transparent; border:none; padding:0; gap:8px; }
+    .tab-nav .nav-link { padding:13px 16px !important; border:1px solid var(--border); border-radius:10px; }
     .tab-nav .nav-link.active::after { display:none; }
-    .nav-cta { margin-top:14px; margin-left:0; }
+    .nav-cta { margin-top:16px; margin-left:0; width:100%; }
+    .nav-cta a.btn-primary-custom { width:100%; justify-content:center; }
+}
+@media (max-width:576px){
+    .navbar-brand { font-size:17px; }
 }
 
 /* =====================================================
@@ -645,7 +656,7 @@ footer.site-footer::before {
                         <a href="#projects" class="btn-primary-custom">
                             <i class="bi bi-rocket-takeoff me-2" aria-hidden="true"></i>View Projects
                         </a>
-                        <a href="#contact" class="btn-outline-custom">
+                        <a href="mailto:nirajjoshi7387@gmail.com" class="btn-outline-custom">
                             <i class="bi bi-envelope me-2" aria-hidden="true"></i>Contact Me
                         </a>
                         <a href="resume/Niraj_Joshi_Resume.pdf" download="Niraj_Joshi_Resume.pdf" class="btn-outline-custom">
