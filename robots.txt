@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://niraj-joshi.vercel.app/sitemap.xml
+Sitemap: https://niraj-joshii-blush.vercel.app/sitemap.xml
